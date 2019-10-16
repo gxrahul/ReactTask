@@ -1,22 +1,653 @@
-.App {
-  text-align: center;
+html {
+    line-height: 1.15;
+    -ms-text-size-adjust: 100%;
+    -webkit-text-size-adjust: 100%
 }
 
-.App-logo {
-  height: 40vmin;
+body {
+    margin: 0
 }
 
-.App-header {
-  background-color: #282c34;
-  min-height: 100vh;
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  justify-content: center;
-  font-size: calc(10px + 2vmin);
-  color: white;
+article,aside,footer,header,nav,section {
+    display: block
 }
 
-.App-link {
-  color: #09d3ac;
+h1 {
+    font-size: 2em;
+    margin: .67em 0
+}
+
+figcaption,figure,main {
+    display: block
+}
+
+figure {
+    margin: 1em 40px
+}
+
+hr {
+    box-sizing: content-box;
+    height: 0;
+    overflow: visible
+}
+
+pre {
+    font-family: monospace,monospace;
+    font-size: 1em
+}
+
+a {
+    background-color: transparent;
+    -webkit-text-decoration-skip: objects
+}
+
+abbr[title] {
+    border-bottom: none;
+    text-decoration: underline;
+    text-decoration: underline dotted
+}
+
+b,strong {
+    font-weight: inherit;
+    font-weight: bolder
+}
+
+code,kbd,samp {
+    font-family: monospace,monospace;
+    font-size: 1em
+}
+
+dfn {
+    font-style: italic
+}
+
+mark {
+    background-color: #ff0;
+    color: #000
+}
+
+small {
+    font-size: 80%
+}
+
+sub,sup {
+    font-size: 75%;
+    line-height: 0;
+    position: relative;
+    vertical-align: baseline
+}
+
+sub {
+    bottom: -.25em
+}
+
+sup {
+    top: -.5em
+}
+
+audio,video {
+    display: inline-block
+}
+
+audio:not([controls]) {
+    display: none;
+    height: 0
+}
+
+img {
+    border-style: none
+}
+
+svg:not(:root) {
+    overflow: hidden
+}
+
+button,input,optgroup,select,textarea {
+    font-family: sans-serif;
+    font-size: 100%;
+    line-height: 1.15;
+    margin: 0
+}
+
+button,input {
+    overflow: visible
+}
+
+button,select {
+    text-transform: none
+}
+
+[type=reset],[type=submit],button,html [type=button] {
+    -webkit-appearance: button
+}
+
+[type=button]::-moz-focus-inner,[type=reset]::-moz-focus-inner,[type=submit]::-moz-focus-inner,button::-moz-focus-inner {
+    border-style: none;
+    padding: 0
+}
+
+[type=button]:-moz-focusring,[type=reset]:-moz-focusring,[type=submit]:-moz-focusring,button:-moz-focusring {
+    outline: 1px dotted ButtonText
+}
+
+fieldset {
+    padding: .35em .75em .625em
+}
+
+legend {
+    box-sizing: border-box;
+    color: inherit;
+    display: table;
+    max-width: 100%;
+    padding: 0;
+    white-space: normal
+}
+
+progress {
+    display: inline-block;
+    vertical-align: baseline
+}
+
+textarea {
+    overflow: auto
+}
+
+[type=checkbox],[type=radio] {
+    box-sizing: border-box;
+    padding: 0
+}
+
+[type=number]::-webkit-inner-spin-button,[type=number]::-webkit-outer-spin-button {
+    height: auto
+}
+
+[type=search] {
+    -webkit-appearance: textfield;
+    outline-offset: -2px
+}
+
+[type=search]::-webkit-search-cancel-button,[type=search]::-webkit-search-decoration {
+    -webkit-appearance: none
+}
+
+::-webkit-file-upload-button {
+    -webkit-appearance: button;
+    font: inherit
+}
+
+details,menu {
+    display: block
+}
+
+summary {
+    display: list-item
+}
+
+canvas {
+    display: inline-block
+}
+
+[hidden],template {
+    display: none
+}
+
+html {
+    box-sizing: border-box;
+    font-family: Arial,Helvetica Neue,sans-serif;
+    font-size: 14px;
+    line-height: 1.2;
+    letter-spacing: -.5px;
+    -moz-font-smoothing: antialiased;
+    -webkit-font-smoothing: antialiased
+}
+
+body,html {
+    margin: 0;
+    padding: 0;
+    height: 100%;
+    font-weight: 300;
+    color: #282c3f
+}
+
+@font-face {
+    font-family: ProximaNova;
+    font-weight: 700;
+    src: url(https://res.cloudinary.com/swiggy/raw/upload/static-assets/production_ci_dweb/fonts/700.5a1536.woff2) format("woff2"),url(https://res.cloudinary.com/swiggy/raw/upload/static-assets/production_ci_dweb/fonts/700.85b748.woff) format("woff"),url(https://res.cloudinary.com/swiggy/raw/upload/static-assets/production_ci_dweb/fonts/700.62c3e8.ttf) format("truetype")
+}
+
+@font-face {
+    font-family: ProximaNova;
+    font-weight: 600;
+    src: url(https://res.cloudinary.com/swiggy/raw/upload/static-assets/production_ci_dweb/fonts/600.cc4493.woff2) format("woff2"),url(https://res.cloudinary.com/swiggy/raw/upload/static-assets/production_ci_dweb/fonts/600.ac7e47.woff) format("woff"),url(https://res.cloudinary.com/swiggy/raw/upload/static-assets/production_ci_dweb/fonts/600.9f6cb0.ttf) format("truetype")
+}
+
+@font-face {
+    font-family: ProximaNova;
+    font-weight: 500;
+    src: url(https://res.cloudinary.com/swiggy/raw/upload/static-assets/production_ci_dweb/fonts/500.204ef6.woff2) format("woff2"),url(https://res.cloudinary.com/swiggy/raw/upload/static-assets/production_ci_dweb/fonts/500.b23851.woff) format("woff"),url(https://res.cloudinary.com/swiggy/raw/upload/static-assets/production_ci_dweb/fonts/500.f37065.ttf) format("truetype")
+}
+
+@font-face {
+    font-family: ProximaNova;
+    font-weight: 400;
+    src: url(https://res.cloudinary.com/swiggy/raw/upload/static-assets/production_ci_dweb/fonts/400.9732a5.woff2) format("woff2"),url(https://res.cloudinary.com/swiggy/raw/upload/static-assets/production_ci_dweb/fonts/400.66aba0.woff) format("woff"),url(https://res.cloudinary.com/swiggy/raw/upload/static-assets/production_ci_dweb/fonts/400.db6a27.ttf) format("truetype")
+}
+
+@font-face {
+    font-family: ProximaNova;
+    font-weight: 300;
+    src: url(https://res.cloudinary.com/swiggy/raw/upload/static-assets/production_ci_dweb/fonts/300.599bdb.woff2) format("woff2"),url(https://res.cloudinary.com/swiggy/raw/upload/static-assets/production_ci_dweb/fonts/300.78077c.woff) format("woff"),url(https://res.cloudinary.com/swiggy/raw/upload/static-assets/production_ci_dweb/fonts/300.bcfdbf.ttf) format("truetype")
+}
+
+.fonts-loaded {
+    font-family: ProximaNova,Arial,Helvetica Neue,sans-serif;
+    letter-spacing: 0
+}
+
+*,:after,:before {
+    box-sizing: inherit
+}
+
+ol,ul {
+    margin: 0;
+    padding: 0;
+    list-style-type: none
+}
+
+input {
+    line-height: normal
+}
+
+a,a:focus,a:hover,a:visited {
+    text-decoration: none
+}
+
+button,input,optgroup,select,textarea {
+    color: inherit;
+    font: inherit;
+    margin: 0
+}
+
+input::-ms-clear {
+    display: none
+}
+
+@font-face {
+    font-family: icomoon;
+    src: url(https://res.cloudinary.com/swiggy/raw/upload/static-assets/production_ci_dweb/fonts/icomoon.c7b56c.eot);
+    src: url(https://res.cloudinary.com/swiggy/raw/upload/static-assets/production_ci_dweb/fonts/icomoon.c7b56c.eot#iefix) format("embedded-opentype"),url(https://res.cloudinary.com/swiggy/raw/upload/static-assets/production_ci_dweb/fonts/icomoon.499d2f.ttf) format("truetype"),url(https://res.cloudinary.com/swiggy/raw/upload/static-assets/production_ci_dweb/fonts/icomoon.922af9.woff) format("woff"),url(https://res.cloudinary.com/swiggy/raw/upload/static-assets/production_ci_dweb/fonts/icomoon.780da4.svg#icomoon) format("svg");
+    font-weight: 400;
+    font-style: normal
+}
+
+[class*=" icon-"],[class^=icon-] {
+    font-family: icomoon;
+    speak: none;
+    font-style: normal;
+    font-weight: 400;
+    font-variant: normal;
+    text-transform: none;
+    line-height: 1;
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale
+}
+
+.icon-meat:before {
+    content: "\E91F"
+}
+
+.icon-leaf:before {
+    content: "\E920"
+}
+
+.icon-percentage:before {
+    content: "\E922"
+}
+
+.icon-downArrow:before {
+    content: "\E923"
+}
+
+.icon-back:before {
+    content: "\E924"
+}
+
+.icon-cartInverse:before {
+    content: "\E925"
+}
+
+.icon-clock:before {
+    content: "\E926"
+}
+
+.icon-close:before {
+    content: "\E927"
+}
+
+.icon-downArrow2:before {
+    content: "\E928"
+}
+
+.icon-downArrowSmall:before {
+    content: "\E929"
+}
+
+.icon-explore:before {
+    content: "\E910"
+}
+
+.icon-heart:before {
+    content: "\E92A"
+}
+
+.icon-heartInverse:before {
+    content: "\E92B"
+}
+
+.icon-filter:before {
+    content: "\E92C"
+}
+
+.icon-home:before {
+    content: "\E92D"
+}
+
+.icon-info:before {
+    content: "\E92E"
+}
+
+.icon-longDistance:before {
+    content: "\E930"
+}
+
+.icon-menu:before {
+    content: "\E931"
+}
+
+.icon-rightArrow:before {
+    content: "\E932"
+}
+
+.icon-moreVertical:before {
+    content: "\E933"
+}
+
+.icon-orderConfirmed:before {
+    content: "\E915"
+}
+
+.icon-orderReceived:before {
+    content: "\E917"
+}
+
+.icon-order-confirmed-inverse:before {
+    content: "\E934"
+}
+
+.icon-order-received-inverse:before {
+    content: "\E92F"
+}
+
+.icon-orderPickedup:before {
+    content: "\E918"
+}
+
+.icon-phone:before {
+    content: "\E937"
+}
+
+.icon-star:before {
+    content: "\E938"
+}
+
+.icon-recent:before {
+    content: "\E939"
+}
+
+.icon-refer:before {
+    content: "\E93A"
+}
+
+.icon-restaurant:before {
+    content: "\E93B"
+}
+
+.icon-magnifier:before {
+    content: "\E910"
+}
+
+.icon-starInverse:before {
+    content: "\E93C"
+}
+
+.icon-lightning:before {
+    content: "\E93D"
+}
+
+.icon-longDistanceSurge:before {
+    content: "\E93E"
+}
+
+.icon-swgy:before {
+    content: "\E93F"
+}
+
+.icon-swgyInverse:before {
+    content: "\E940"
+}
+
+.icon-tickSharp:before {
+    content: "\E941"
+}
+
+.icon-tickRound:before {
+    content: "\E942"
+}
+
+.icon-foodSymbol:before {
+    content: "\E944"
+}
+
+.icon-verified:before {
+    content: "\E945"
+}
+
+.icon-work:before {
+    content: "\E946"
+}
+
+.icon-offer-filled:before {
+    content: "\E921"
+}
+
+.icon-downCircle:before {
+    content: "\E936"
+}
+
+.icon-upCircle:before {
+    content: "\E943"
+}
+
+.icon-badge:before {
+    content: "\E94D"
+}
+
+.icon-clockDark:before {
+    content: "\E94E"
+}
+
+.icon-orderCancel:before {
+    content: "\E947"
+}
+
+.icon-orderDelivered:before {
+    content: "\E916"
+}
+
+.icon-delete:before {
+    content: "\E949"
+}
+
+.icon-snacks:before {
+    content: "\E94F"
+}
+
+.icon-homeDark:before {
+    content: "\E94A"
+}
+
+.icon-markerDark:before {
+    content: "\E94B"
+}
+
+.icon-workDark:before {
+    content: "\E94C"
+}
+
+.icon-beverage:before {
+    content: "\E91B"
+}
+
+.icon-beverage-2:before {
+    content: "\E91C"
+}
+
+.icon-close-thin:before {
+    content: "\E913"
+}
+
+.icon-location:before {
+    content: "\E911"
+}
+
+.icon-location-crosshair:before {
+    content: "\E914"
+}
+
+.icon-alert:before {
+    content: "\E956"
+}
+
+.icon-help:before {
+    content: "\E90F"
+}
+
+.icon-netbanking:before {
+    content: "\E907"
+}
+
+.icon-paybycash:before {
+    content: "\E908"
+}
+
+.icon-preferred:before {
+    content: "\E909"
+}
+
+.icon-saved-card:before {
+    content: "\E90A"
+}
+
+.icon-wallet-filled:before {
+    content: "\E90B"
+}
+
+.icon-wallet-checkout:before {
+    content: "\E90C"
+}
+
+.icon-marker-checkout:before {
+    content: "\E90D"
+}
+
+.icon-user-checkout:before {
+    content: "\E90E"
+}
+
+.icon-payments:before {
+    content: "\E912"
+}
+
+.icon-orders:before {
+    content: "\E919"
+}
+
+.icon-offers:before {
+    content: "\E91A"
+}
+
+.icon-manage-addresses:before {
+    content: "\E91D"
+}
+
+.icon-favourites:before {
+    content: "\E91E"
+}
+
+.icon-overdue:before {
+    content: "\E906"
+}
+
+.icon-assured-shield:before {
+    content: "\E935"
+}
+
+.icon-add-new-card:before {
+    content: "\E905"
+}
+
+.icon-offer-active:before {
+    content: "\E955"
+}
+
+.icon-offers-coupon:before {
+    content: "\E948"
+}
+
+.icon-paylater:before {
+    content: "\E950"
+}
+
+.icon-super-outline:before {
+    content: "\E951"
+}
+
+.icon-super-filled:before {
+    content: "\E952"
+}
+
+.icon-super-account:before {
+    content: "\E953"
+}
+
+.icon-multi-offer:before {
+    content: "\E904"
+}
+
+.icon-chat:before {
+    content: "\E954"
+}
+
+.icon-upi:before {
+    content: "\E902"
+}
+
+.icon-check-round:before {
+    content: "\E903"
+}
+
+.icon-feedback:before {
+    content: "\E901"
+}
+
+.icon-quotes-rounded:before {
+    content: "\E900"
+}
+
+.icon-down-bold:before {
+    content: "\E957"
+}
+
+#root {
+	height: 100%;
 }
