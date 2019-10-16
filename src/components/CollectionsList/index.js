@@ -15,7 +15,6 @@ const CollectionName = styled.div`
 
 
 export default function(props) {
-	console.log('restaurant list', props.name, props.restaurants.length);
 	return (
 		<CollectionContainer id={props.id}>
 			<CollectionName>{props.name.split(' ').map(word => word.replace(word[0], word[0].toUpperCase())).join(' ')}</CollectionName>

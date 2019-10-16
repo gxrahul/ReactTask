@@ -148,7 +148,6 @@ export const getRestaurantsInCollectionByPageService = (collectionName, page = 1
 export const getAllRestaurantsService = (page = 1) => {
 	return new Promise((resolve) => {
 		setTimeout(() => {
-			console.log('>>>>>>>>>>>>>>>>>>>>>>>>>>>>>', allRestaurants);
 			resolve(allRestaurants);
 		}, DUMMY_DELAY);
 	});

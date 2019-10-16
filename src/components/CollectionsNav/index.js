@@ -37,7 +37,6 @@ const ListItem = styled(Link)`
 
 export default function(props) {
 	const [activeCat, setActiveCat] = useState('popular-brands');
-	console.log('collections nav render');
 	return (
 		<ScrollableCategoryList>
 			{props.navOptions && props.navOptions.length ?

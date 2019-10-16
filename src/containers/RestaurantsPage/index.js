@@ -89,7 +89,6 @@ class RestaurantsPage extends React.Component {
 }
 
 const mapStatetoProps = (state) => {
-	console.log('state.collectionsReducer', state.collectionsReducer);
 	return {
 		...state.collectionNavOptionsReducer,
 		...state.collectionsReducer,

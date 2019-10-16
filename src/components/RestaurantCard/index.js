@@ -140,7 +140,6 @@ const Price = styled.div`
 `;
 
 export default function(props) {
-	// console.log('restaurant card', props);
 	return (
 		<ClickableWrap>
 			<CardBox>

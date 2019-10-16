@@ -60,9 +60,7 @@ const toMatrix = (items, rowSize, totalItems) => {
 };
 
 export default function ({items, totalItems, loadMoreItemsHandler, currentPage, rowSize, ItemComponent}) {
-	// console.log('Render Grid>>>>>>>>', items, totalItems);
 	const matrix = toMatrix(items, rowSize, totalItems);
-	// console.log('matrix', matrix);
 	return (
 		<GridContainer>
 			{matrix.map((columns, rowIndex) => (
